@@ -35,7 +35,8 @@ class Widgets extends Component {
   render() {
     return (
       <div className="widgets-container">
-        {this.props.userConfig.num_drinks === 1 && (
+        {this.props.userConfig.num_drinks === true ||
+        this.props.userConfig.num_drinks === 1 ? (
           <div className="widget num_drinks">
             <div className="header">
               <h2>Number of Drinks</h2>
@@ -45,8 +46,9 @@ class Widgets extends Component {
               <p>We have {this.props.data.num_drinks}, honestly!</p>
             </div>
           </div>
-        )}
-        {this.props.userConfig.office_temp === 1 && (
+        ) : null}
+        {this.props.userConfig.office_temp === true ||
+        this.props.userConfig.office_temp === 1 ? (
           <div className="widget office_temp">
             <div className="header">
               <h2>Office Temperature</h2>
@@ -68,8 +70,9 @@ class Widgets extends Component {
               </p>
             </div>
           </div>
-        )}
-        {this.props.userConfig.plant_sched === 1 && (
+        ) : null}
+        {this.props.userConfig.plant_sched === true ||
+        this.props.userConfig.plant_sched === 1 ? (
           <div className="widget plant_sched">
             <div className="header">
               <h2>Plant Watering Schedule</h2>
@@ -89,8 +92,9 @@ class Widgets extends Component {
               </p>
             </div>
           </div>
-        )}
-        {this.props.userConfig.visitors === 1 && (
+        ) : null}
+        {this.props.userConfig.visitors === true ||
+        this.props.userConfig.visitors === 1 ? (
           <div className="widget visitors">
             <div className="header">
               <h2>Visitors</h2>
@@ -116,8 +120,9 @@ class Widgets extends Component {
               </p>
             </div>
           </div>
-        )}
-        {this.props.userConfig.weather === 1 && (
+        ) : null}
+        {this.props.userConfig.weather === true ||
+        this.props.userConfig.weather === 1 ? (
           <div className="widget weather">
             <div className="header">
               <h2>Weather</h2>
@@ -129,7 +134,7 @@ class Widgets extends Component {
               <p>{this.props.data.weather}˚</p>
             </div>
           </div>
-        )}
+        ) : null}
       </div>
     );
   }
