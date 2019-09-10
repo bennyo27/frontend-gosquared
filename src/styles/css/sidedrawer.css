@@ -1,0 +1,37 @@
+.drawer-wrapper {
+  width: 100%;
+  max-width: 50px;
+  display: flex;
+  justify-content: center;
+}
+.drawer-wrapper .drawer {
+  max-width: 100%;
+  width: 300px;
+}
+.drawer-wrapper .toggle {
+  cursor: pointer;
+}
+.header {
+  margin: 20px;
+}
+.widgets {
+  background-color: #3d4950;
+  color: #e6eff6;
+  height: 100%;
+}
+.widgets .widget {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  margin: 0 15px 0 15px;
+  cursor: pointer;
+}
+.widgets .widget .active {
+  display: flex;
+  justify-content: center;
+}
+.widgets .logout {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
